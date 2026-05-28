@@ -1,0 +1,25 @@
+name: Docker Build (Action)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  docker-build:
+    name: Build Dockerfile via docker/build-push-action
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          push: false
+          tags: ecosystems-demo:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
