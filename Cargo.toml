@@ -3,6 +3,10 @@ name = "ecosystems-demo"
 version = "1.0.0"
 edition = "2021"
 
+[lib]
+name = "ecosystems_demo"
+path = "src/lib.rs"
+
 # Top 5 most downloaded Rust crates
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
