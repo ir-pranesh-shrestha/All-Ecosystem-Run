@@ -8,28 +8,60 @@ jobs:
     name: npm (Node.js)
     runs-on: ubuntu-latest
     steps:
+      # ============= InvisiRisk Setup =============
+      - name: Setup PSE
+        uses: invisirisk/pse-action@latest
+        with:
+          app_token: ${{secrets.IR_API_KEY}}
+      # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "npm"
       - run: npm install
+      # ============= InvisiRisk Cleanup =============
+      - name: Cleanup PSE
+        if: always()
+        uses: invisirisk/pse-action@latest
+        with:
+          cleanup: "true"
+      # ============= InvisiRisk Cleanup End =============
 
   pip:
     name: pip (Python)
     runs-on: ubuntu-latest
     steps:
+      # ============= InvisiRisk Setup =============
+      - name: Setup PSE
+        uses: invisirisk/pse-action@latest
+        with:
+          app_token: ${{secrets.IR_API_KEY}}
+      # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: "pip"
       - run: pip install -r requirements.txt
+      # ============= InvisiRisk Cleanup =============
+      - name: Cleanup PSE
+        if: always()
+        uses: invisirisk/pse-action@latest
+        with:
+          cleanup: "true"
+      # ============= InvisiRisk Cleanup End =============
 
   maven:
     name: mvn (Java)
     runs-on: ubuntu-latest
     steps:
+      # ============= InvisiRisk Setup =============
+      - name: Setup PSE
+        uses: invisirisk/pse-action@latest
+        with:
+          app_token: ${{secrets.IR_API_KEY}}
+      # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
         with:
@@ -37,65 +69,150 @@ jobs:
           distribution: "temurin"
           cache: "maven"
       - run: mvn dependency:resolve --no-transfer-progress
+      # ============= InvisiRisk Cleanup =============
+      - name: Cleanup PSE
+        if: always()
+        uses: invisirisk/pse-action@latest
+        with:
+          cleanup: "true"
+      # ============= InvisiRisk Cleanup End =============
 
   deno:
     name: deno cache
     runs-on: ubuntu-latest
     steps:
+      # ============= InvisiRisk Setup =============
+      - name: Setup PSE
+        uses: invisirisk/pse-action@latest
+        with:
+          app_token: ${{secrets.IR_API_KEY}}
+      # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
       - uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
       - run: deno cache --config deno.json
+      # ============= InvisiRisk Cleanup =============
+      - name: Cleanup PSE
+        if: always()
+        uses: invisirisk/pse-action@latest
+        with:
+          cleanup: "true"
+      # ============= InvisiRisk Cleanup End =============
 
   dotnet:
     name: dotnet restore (NuGet)
     runs-on: ubuntu-latest
     steps:
+      # ============= InvisiRisk Setup =============
+      - name: Setup PSE
+        uses: invisirisk/pse-action@latest
+        with:
+          app_token: ${{secrets.IR_API_KEY}}
+      # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "8.0.x"
       - run: dotnet restore packages.csproj
+      # ============= InvisiRisk Cleanup =============
+      - name: Cleanup PSE
+        if: always()
+        uses: invisirisk/pse-action@latest
+        with:
+          cleanup: "true"
+      # ============= InvisiRisk Cleanup End =============
 
   bundler:
     name: bundle install (Ruby)
     runs-on: ubuntu-latest
     steps:
+      # ============= InvisiRisk Setup =============
+      - name: Setup PSE
+        uses: invisirisk/pse-action@latest
+        with:
+          app_token: ${{secrets.IR_API_KEY}}
+      # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
           bundler-cache: true
+      # ============= InvisiRisk Cleanup =============
+      - name: Cleanup PSE
+        if: always()
+        uses: invisirisk/pse-action@latest
+        with:
+          cleanup: "true"
+      # ============= InvisiRisk Cleanup End =============
 
   go:
     name: go mod download
     runs-on: ubuntu-latest
     steps:
+      # ============= InvisiRisk Setup =============
+      - name: Setup PSE
+        uses: invisirisk/pse-action@latest
+        with:
+          app_token: ${{secrets.IR_API_KEY}}
+      # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
         with:
           go-version: "1.22"
           cache: true
       - run: go mod download
+      # ============= InvisiRisk Cleanup =============
+      - name: Cleanup PSE
+        if: always()
+        uses: invisirisk/pse-action@latest
+        with:
+          cleanup: "true"
+      # ============= InvisiRisk Cleanup End =============
 
   composer:
     name: composer install (PHP)
     runs-on: ubuntu-latest
     steps:
+      # ============= InvisiRisk Setup =============
+      - name: Setup PSE
+        uses: invisirisk/pse-action@latest
+        with:
+          app_token: ${{secrets.IR_API_KEY}}
+      # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
       - uses: shivammathur/setup-php@v2
         with:
           php-version: "8.3"
           tools: composer:v2
       - run: composer install --no-interaction --prefer-dist --optimize-autoloader
+      # ============= InvisiRisk Cleanup =============
+      - name: Cleanup PSE
+        if: always()
+        uses: invisirisk/pse-action@latest
+        with:
+          cleanup: "true"
+      # ============= InvisiRisk Cleanup End =============
 
   cargo:
     name: cargo fetch (Rust)
     runs-on: ubuntu-latest
     steps:
+      # ============= InvisiRisk Setup =============
+      - name: Setup PSE
+        uses: invisirisk/pse-action@latest
+        with:
+          app_token: ${{secrets.IR_API_KEY}}
+      # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
       - uses: actions-rust-lang/setup-rust-toolchain@v1
         with:
           toolchain: stable
       - run: cargo fetch
+      # ============= InvisiRisk Cleanup =============
+      - name: Cleanup PSE
+        if: always()
+        uses: invisirisk/pse-action@latest
+        with:
+          cleanup: "true"
+      # ============= InvisiRisk Cleanup End =============
