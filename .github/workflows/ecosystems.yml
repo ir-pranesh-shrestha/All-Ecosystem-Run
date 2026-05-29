@@ -10,7 +10,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           app_token: ${{secrets.IR_API_KEY}}
       # ============= InvisiRisk Setup End =============
@@ -22,7 +22,7 @@ jobs:
       # ============= InvisiRisk Cleanup =============
       - name: Cleanup PSE
         if: always()
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           cleanup: "true"
       # ============= InvisiRisk Cleanup End =============
@@ -33,7 +33,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           app_token: ${{secrets.IR_API_KEY}}
       # ============= InvisiRisk Setup End =============
@@ -45,7 +45,7 @@ jobs:
       # ============= InvisiRisk Cleanup =============
       - name: Cleanup PSE
         if: always()
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           cleanup: "true"
       # ============= InvisiRisk Cleanup End =============
@@ -56,7 +56,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           app_token: ${{secrets.IR_API_KEY}}
       # ============= InvisiRisk Setup End =============
@@ -69,7 +69,7 @@ jobs:
       # ============= InvisiRisk Cleanup =============
       - name: Cleanup PSE
         if: always()
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           cleanup: "true"
       # ============= InvisiRisk Cleanup End =============
@@ -80,7 +80,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           app_token: ${{secrets.IR_API_KEY}}
       # ============= InvisiRisk Setup End =============
@@ -92,7 +92,7 @@ jobs:
       # ============= InvisiRisk Cleanup =============
       - name: Cleanup PSE
         if: always()
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           cleanup: "true"
       # ============= InvisiRisk Cleanup End =============
@@ -103,7 +103,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           app_token: ${{secrets.IR_API_KEY}}
       # ============= InvisiRisk Setup End =============
@@ -115,7 +115,7 @@ jobs:
       # ============= InvisiRisk Cleanup =============
       - name: Cleanup PSE
         if: always()
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           cleanup: "true"
       # ============= InvisiRisk Cleanup End =============
@@ -126,7 +126,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           app_token: ${{secrets.IR_API_KEY}}
       # ============= InvisiRisk Setup End =============
@@ -137,7 +137,7 @@ jobs:
       # ============= InvisiRisk Cleanup =============
       - name: Cleanup PSE
         if: always()
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           cleanup: "true"
       # ============= InvisiRisk Cleanup End =============
@@ -148,7 +148,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           app_token: ${{secrets.IR_API_KEY}}
       # ============= InvisiRisk Setup End =============
@@ -160,7 +160,7 @@ jobs:
       # ============= InvisiRisk Cleanup =============
       - name: Cleanup PSE
         if: always()
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           cleanup: "true"
       # ============= InvisiRisk Cleanup End =============
@@ -171,7 +171,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           app_token: ${{secrets.IR_API_KEY}}
       # ============= InvisiRisk Setup End =============
@@ -184,7 +184,7 @@ jobs:
       # ============= InvisiRisk Cleanup =============
       - name: Cleanup PSE
         if: always()
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           cleanup: "true"
       # ============= InvisiRisk Cleanup End =============
@@ -195,7 +195,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           app_token: ${{secrets.IR_API_KEY}}
       # ============= InvisiRisk Setup End =============
@@ -207,7 +207,7 @@ jobs:
       # ============= InvisiRisk Cleanup =============
       - name: Cleanup PSE
         if: always()
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           cleanup: "true"
       # ============= InvisiRisk Cleanup End =============
