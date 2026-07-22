@@ -6,11 +6,11 @@ on:
 jobs:
   npm:
     name: npm (Node.js)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-develop
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -23,11 +23,11 @@ jobs:
 
   pip:
     name: pip (Python)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-develop
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -41,11 +41,11 @@ jobs:
 
   maven:
     name: mvn (Java)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-develop
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -59,11 +59,11 @@ jobs:
 
   deno:
     name: deno cache
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-develop
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -77,11 +77,11 @@ jobs:
 
   dotnet:
     name: dotnet restore (NuGet)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-develop
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -95,11 +95,11 @@ jobs:
 
   bundler:
     name: bundle install (Ruby)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-develop
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -111,11 +111,11 @@ jobs:
 
   go:
     name: go mod download
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-develop
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -129,11 +129,11 @@ jobs:
 
   composer:
     name: composer install (PHP)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-develop
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -148,11 +148,11 @@ jobs:
 
   cargo:
     name: cargo fetch (Rust)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-develop
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@latest
+        uses: invisirisk/pse-action@develop
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
