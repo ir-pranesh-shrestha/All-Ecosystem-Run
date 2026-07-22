@@ -10,7 +10,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@develop
+        uses: invisirisk/pse-action@latest
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -20,13 +20,6 @@ jobs:
         with:
           node-version: "20"
       - run: npm install
-      # ============= InvisiRisk Cleanup =============
-      - name: Cleanup PSE
-        if: always()
-        uses: invisirisk/pse-action@develop
-        with:
-          cleanup: "true"
-      # ============= InvisiRisk Cleanup End =============
 
   pip:
     name: pip (Python)
@@ -34,7 +27,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@develop
+        uses: invisirisk/pse-action@latest
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -44,13 +37,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      # ============= InvisiRisk Cleanup =============
-      - name: Cleanup PSE
-        if: always()
-        uses: invisirisk/pse-action@develop
-        with:
-          cleanup: "true"
-      # ============= InvisiRisk Cleanup End =============
+
 
   maven:
     name: mvn (Java)
@@ -58,7 +45,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@develop
+        uses: invisirisk/pse-action@latest
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -69,13 +56,6 @@ jobs:
           java-version: "17"
           distribution: "temurin"
       - run: mvn dependency:resolve --no-transfer-progress
-      # ============= InvisiRisk Cleanup =============
-      - name: Cleanup PSE
-        if: always()
-        uses: invisirisk/pse-action@develop
-        with:
-          cleanup: "true"
-      # ============= InvisiRisk Cleanup End =============
 
   deno:
     name: deno cache
@@ -83,7 +63,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@develop
+        uses: invisirisk/pse-action@latest
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -93,13 +73,7 @@ jobs:
         with:
           deno-version: v2.x
       - run: deno install
-      # ============= InvisiRisk Cleanup =============
-      - name: Cleanup PSE
-        if: always()
-        uses: invisirisk/pse-action@develop
-        with:
-          cleanup: "true"
-      # ============= InvisiRisk Cleanup End =============
+
 
   dotnet:
     name: dotnet restore (NuGet)
@@ -107,7 +81,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@develop
+        uses: invisirisk/pse-action@latest
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -117,13 +91,7 @@ jobs:
         with:
           dotnet-version: "8.0.x"
       - run: dotnet restore packages.csproj
-      # ============= InvisiRisk Cleanup =============
-      - name: Cleanup PSE
-        if: always()
-        uses: invisirisk/pse-action@develop
-        with:
-          cleanup: "true"
-      # ============= InvisiRisk Cleanup End =============
+
 
   bundler:
     name: bundle install (Ruby)
@@ -131,7 +99,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@develop
+        uses: invisirisk/pse-action@latest
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -140,13 +108,6 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
-      # ============= InvisiRisk Cleanup =============
-      - name: Cleanup PSE
-        if: always()
-        uses: invisirisk/pse-action@develop
-        with:
-          cleanup: "true"
-      # ============= InvisiRisk Cleanup End =============
 
   go:
     name: go mod download
@@ -154,7 +115,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@develop
+        uses: invisirisk/pse-action@latest
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -164,13 +125,7 @@ jobs:
         with:
           go-version: "1.22"
       - run: go mod download
-      # ============= InvisiRisk Cleanup =============
-      - name: Cleanup PSE
-        if: always()
-        uses: invisirisk/pse-action@develop
-        with:
-          cleanup: "true"
-      # ============= InvisiRisk Cleanup End =============
+
 
   composer:
     name: composer install (PHP)
@@ -178,7 +133,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@develop
+        uses: invisirisk/pse-action@latest
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -189,13 +144,7 @@ jobs:
           php-version: "8.3"
           tools: composer:v2
       - run: composer install --no-interaction --prefer-dist --optimize-autoloader
-      # ============= InvisiRisk Cleanup =============
-      - name: Cleanup PSE
-        if: always()
-        uses: invisirisk/pse-action@develop
-        with:
-          cleanup: "true"
-      # ============= InvisiRisk Cleanup End =============
+
 
   cargo:
     name: cargo fetch (Rust)
@@ -203,7 +152,7 @@ jobs:
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
-        uses: invisirisk/pse-action@develop
+        uses: invisirisk/pse-action@latest
         with:
           api_url: https://app.dev.invisirisk.com/
           app_token: ${{secrets.IR_API_KEY}}
@@ -213,10 +162,4 @@ jobs:
         with:
           toolchain: stable
       - run: cargo fetch
-      # ============= InvisiRisk Cleanup =============
-      - name: Cleanup PSE
-        if: always()
-        uses: invisirisk/pse-action@develop
-        with:
-          cleanup: "true"
-      # ============= InvisiRisk Cleanup End =============
+
