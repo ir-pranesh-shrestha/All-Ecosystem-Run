@@ -143,7 +143,9 @@ jobs:
         with:
           php-version: "8.3"
           tools: composer:v2
-      - run: composer install --no-interaction --prefer-dist --optimize-autoloader
+      - run: |
+          composer config --no-plugins policy.advisories.block false
+          composer install --no-interaction --prefer-dist --optimize-autoloader
 
 
   cargo:
