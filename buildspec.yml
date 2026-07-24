@@ -1,0 +1,72 @@
+version: 0.2
+
+batch:
+  build-list:
+    - identifier: npm
+      env:
+        variables: { ECOSYSTEM: npm }
+    - identifier: pip
+      env:
+        variables: { ECOSYSTEM: pip }
+    - identifier: maven
+      env:
+        variables: { ECOSYSTEM: maven }
+    - identifier: deno
+      env:
+        variables: { ECOSYSTEM: deno }
+    - identifier: dotnet
+      env:
+        variables: { ECOSYSTEM: dotnet }
+    - identifier: bundler
+      env:
+        variables: { ECOSYSTEM: bundler }
+    - identifier: go
+      env:
+        variables: { ECOSYSTEM: go }
+    - identifier: composer
+      env:
+        variables: { ECOSYSTEM: composer }
+    - identifier: cargo
+      env:
+        variables: { ECOSYSTEM: cargo }
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+      python: 3.12
+      java: corretto17
+      dotnet: 8.0
+      ruby: 3.3
+      golang: 1.22
+      php: 8.3
+    commands:
+      - echo "Setting up $ECOSYSTEM"
+
+  pre_build:
+    commands:
+      # ============= InvisiRisk BAF setup =============
+      - |
+        curl -sSf -H "x-api-key: ${IR_TOKEN}" "https://app.dev.invisirisk.com/ingestionapi/v1/pse/bootstrap" | bash
+        . /tmp/ir_envs
+      # ============= InvisiRisk BAF setup End =============
+
+  build:
+    commands:
+      - |
+        case "$ECOSYSTEM" in
+          npm)      npm install ;;
+          pip)      pip install -r requirements.txt ;;
+          maven)    mvn dependency:resolve --no-transfer-progress ;;
+          deno)     curl -fsSL https://deno.land/install.sh | sh && export PATH="$HOME/.deno/bin:$PATH" && deno install ;;
+          dotnet)   dotnet restore packages.csproj ;;
+          bundler)  bundle install ;;
+          go)       go mod download ;;
+          composer) composer install --no-interaction --prefer-dist --optimize-autoloader ;;
+          cargo)    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && . "$HOME/.cargo/env" && cargo fetch ;;
+        esac
+
+  post_build:
+    commands:
+      # ============= InvisiRisk BAF cleanup =============
+      - pse-data-collector cleanup
