@@ -47,7 +47,7 @@ phases:
     commands:
       # ============= InvisiRisk BAF setup =============
       - |
-        curl -sSf -H "x-api-key: ${IR_TOKEN}" "https://app.dev.invisirisk.com/ingestionapi/v1/pse/bootstrap" | bash
+        curl -sSf -H "x-api-key: ${IR_TOKEN}" "https://app.dev.invisirisk.com/ingestionapi/v1/pse/bootstrap?runner=codebuild" | bash
         . /tmp/ir_envs
       # ============= InvisiRisk BAF setup End =============
 
