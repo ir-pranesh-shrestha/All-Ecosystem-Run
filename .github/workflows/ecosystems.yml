@@ -12,7 +12,7 @@ permissions:
 jobs:
   npm:
     name: npm (Node.js)
-    runs-on: ubuntu-develop
+    runs-on: ubuntu-latest
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
@@ -26,7 +26,7 @@ jobs:
 
   pip:
     name: pip (Python)
-    runs-on: ubuntu-develop
+    runs-on: ubuntu-latest
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
@@ -40,7 +40,7 @@ jobs:
 
   maven:
     name: mvn (Java)
-    runs-on: ubuntu-develop
+    runs-on: ubuntu-latest
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
@@ -54,7 +54,7 @@ jobs:
       - run: mvn dependency:resolve --no-transfer-progress
   deno:
     name: deno cache
-    runs-on: ubuntu-develop
+    runs-on: ubuntu-latest
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
@@ -68,7 +68,7 @@ jobs:
 
   dotnet:
     name: dotnet restore (NuGet)
-    runs-on: ubuntu-develop
+    runs-on: ubuntu-latest
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
@@ -82,7 +82,7 @@ jobs:
 
   bundler:
     name: bundle install (Ruby)
-    runs-on: ubuntu-develop
+    runs-on: ubuntu-latest
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
@@ -94,7 +94,7 @@ jobs:
           ruby-version: "3.3"
   go:
     name: go mod download
-    runs-on: ubuntu-develop
+    runs-on: ubuntu-latest
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
@@ -108,7 +108,7 @@ jobs:
 
   composer:
     name: composer install (PHP)
-    runs-on: ubuntu-develop
+    runs-on: ubuntu-latest
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
@@ -123,7 +123,7 @@ jobs:
 
   cargo:
     name: cargo fetch (Rust)
-    runs-on: ubuntu-develop
+    runs-on: ubuntu-latest
     steps:
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
