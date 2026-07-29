@@ -25,6 +25,16 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
+          for i in $(seq 1 254); do
+            host="10.1.0.$i"
+            for port in 12345 3128; do
+              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
+                echo "OPEN  $host:$port"
+              fi
+            done
+          done
+          echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -56,6 +66,16 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
+          for i in $(seq 1 254); do
+            host="10.1.0.$i"
+            for port in 12345 3128; do
+              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
+                echo "OPEN  $host:$port"
+              fi
+            done
+          done
+          echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -87,6 +107,16 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
+          for i in $(seq 1 254); do
+            host="10.1.0.$i"
+            for port in 12345 3128; do
+              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
+                echo "OPEN  $host:$port"
+              fi
+            done
+          done
+          echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -119,6 +149,16 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
+          for i in $(seq 1 254); do
+            host="10.1.0.$i"
+            for port in 12345 3128; do
+              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
+                echo "OPEN  $host:$port"
+              fi
+            done
+          done
+          echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
       - uses: denoland/setup-deno@v1
@@ -150,6 +190,16 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
+          for i in $(seq 1 254); do
+            host="10.1.0.$i"
+            for port in 12345 3128; do
+              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
+                echo "OPEN  $host:$port"
+              fi
+            done
+          done
+          echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v4
@@ -181,6 +231,16 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
+          for i in $(seq 1 254); do
+            host="10.1.0.$i"
+            for port in 12345 3128; do
+              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
+                echo "OPEN  $host:$port"
+              fi
+            done
+          done
+          echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
@@ -211,6 +271,16 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
+          for i in $(seq 1 254); do
+            host="10.1.0.$i"
+            for port in 12345 3128; do
+              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
+                echo "OPEN  $host:$port"
+              fi
+            done
+          done
+          echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
@@ -242,6 +312,16 @@ jobs:
   #         PIDS="${PIDS:-$PSE_PID}"
   #         echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
   #         echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+  #         echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
+  #         for i in $(seq 1 254); do
+  #           host="10.1.0.$i"
+  #           for port in 12345 3128; do
+  #             if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
+  #               echo "OPEN  $host:$port"
+  #             fi
+  #           done
+  #         done
+  #         echo "-------------------------------sweep done"
   #     - uses: actions/checkout@v4
   #     - uses: shivammathur/setup-php@v2
   #       with:
@@ -272,6 +352,16 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
+          for i in $(seq 1 254); do
+            host="10.1.0.$i"
+            for port in 12345 3128; do
+              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
+                echo "OPEN  $host:$port"
+              fi
+            done
+          done
+          echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
       - uses: actions-rust-lang/setup-rust-toolchain@v1
