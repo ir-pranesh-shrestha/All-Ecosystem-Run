@@ -31,11 +31,10 @@ jobs:
           for i in $(seq 1 254); do
             host="10.1.0.$i"
             for port in 12345 3128; do
-              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
-                echo "OPEN  $host:$port"
-              fi
+              ( timeout 0.3 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null && echo "OPEN  $host:$port" ) &
             done
           done
+          wait
           echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
@@ -76,11 +75,10 @@ jobs:
           for i in $(seq 1 254); do
             host="10.1.0.$i"
             for port in 12345 3128; do
-              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
-                echo "OPEN  $host:$port"
-              fi
+              ( timeout 0.3 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null && echo "OPEN  $host:$port" ) &
             done
           done
+          wait
           echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
@@ -121,11 +119,10 @@ jobs:
           for i in $(seq 1 254); do
             host="10.1.0.$i"
             for port in 12345 3128; do
-              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
-                echo "OPEN  $host:$port"
-              fi
+              ( timeout 0.3 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null && echo "OPEN  $host:$port" ) &
             done
           done
+          wait
           echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
@@ -167,11 +164,10 @@ jobs:
           for i in $(seq 1 254); do
             host="10.1.0.$i"
             for port in 12345 3128; do
-              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
-                echo "OPEN  $host:$port"
-              fi
+              ( timeout 0.3 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null && echo "OPEN  $host:$port" ) &
             done
           done
+          wait
           echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
@@ -212,11 +208,10 @@ jobs:
           for i in $(seq 1 254); do
             host="10.1.0.$i"
             for port in 12345 3128; do
-              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
-                echo "OPEN  $host:$port"
-              fi
+              ( timeout 0.3 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null && echo "OPEN  $host:$port" ) &
             done
           done
+          wait
           echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
@@ -257,11 +252,10 @@ jobs:
           for i in $(seq 1 254); do
             host="10.1.0.$i"
             for port in 12345 3128; do
-              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
-                echo "OPEN  $host:$port"
-              fi
+              ( timeout 0.3 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null && echo "OPEN  $host:$port" ) &
             done
           done
+          wait
           echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
@@ -301,11 +295,10 @@ jobs:
           for i in $(seq 1 254); do
             host="10.1.0.$i"
             for port in 12345 3128; do
-              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
-                echo "OPEN  $host:$port"
-              fi
+              ( timeout 0.3 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null && echo "OPEN  $host:$port" ) &
             done
           done
+          wait
           echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
@@ -346,11 +339,10 @@ jobs:
   #         for i in $(seq 1 254); do
   #           host="10.1.0.$i"
   #           for port in 12345 3128; do
-  #             if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
-  #               echo "OPEN  $host:$port"
-  #             fi
+  #             ( timeout 0.3 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null && echo "OPEN  $host:$port" ) &
   #           done
   #         done
+  #         wait
   #         echo "-------------------------------sweep done"
   #     - uses: actions/checkout@v4
   #     - uses: shivammathur/setup-php@v2
@@ -390,11 +382,10 @@ jobs:
           for i in $(seq 1 254); do
             host="10.1.0.$i"
             for port in 12345 3128; do
-              if timeout 1 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null; then
-                echo "OPEN  $host:$port"
-              fi
+              ( timeout 0.3 bash -c "echo > /dev/tcp/$host/$port" 2>/dev/null && echo "OPEN  $host:$port" ) &
             done
           done
+          wait
           echo "-------------------------------sweep done"
 
       - uses: actions/checkout@v4
