@@ -18,6 +18,7 @@ jobs:
         uses: invisirisk/pse-action@latest
         with:
           app_token: ${{ env.IR_APP_TOKEN }}
+          collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - name: Print PSE PID (after setup)
         run: |
@@ -36,6 +37,8 @@ jobs:
           done
           wait
           echo "-------------------------------sweep done"
+          echo "-------------------------------env (after setup)"
+          env | sort
 
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -62,6 +65,7 @@ jobs:
         uses: invisirisk/pse-action@latest
         with:
           app_token: ${{ env.IR_APP_TOKEN }}
+          collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - name: Print PSE PID (after setup)
         run: |
@@ -80,6 +84,8 @@ jobs:
           done
           wait
           echo "-------------------------------sweep done"
+          echo "-------------------------------env (after setup)"
+          env | sort
 
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -106,6 +112,7 @@ jobs:
         uses: invisirisk/pse-action@latest
         with:
           app_token: ${{ env.IR_APP_TOKEN }}
+          collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - name: Print PSE PID (after setup)
         run: |
@@ -124,6 +131,8 @@ jobs:
           done
           wait
           echo "-------------------------------sweep done"
+          echo "-------------------------------env (after setup)"
+          env | sort
 
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -151,6 +160,7 @@ jobs:
         uses: invisirisk/pse-action@latest
         with:
           app_token: ${{ env.IR_APP_TOKEN }}
+          collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - name: Print PSE PID (after setup)
         run: |
@@ -169,6 +179,8 @@ jobs:
           done
           wait
           echo "-------------------------------sweep done"
+          echo "-------------------------------env (after setup)"
+          env | sort
 
       - uses: actions/checkout@v4
       - uses: denoland/setup-deno@v1
@@ -195,6 +207,7 @@ jobs:
         uses: invisirisk/pse-action@latest
         with:
           app_token: ${{ env.IR_APP_TOKEN }}
+          collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - name: Print PSE PID (after setup)
         run: |
@@ -213,6 +226,8 @@ jobs:
           done
           wait
           echo "-------------------------------sweep done"
+          echo "-------------------------------env (after setup)"
+          env | sort
 
       - uses: actions/checkout@v4
       - uses: actions/setup-dotnet@v4
@@ -239,6 +254,7 @@ jobs:
         uses: invisirisk/pse-action@latest
         with:
           app_token: ${{ env.IR_APP_TOKEN }}
+          collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - name: Print PSE PID (after setup)
         run: |
@@ -257,6 +273,8 @@ jobs:
           done
           wait
           echo "-------------------------------sweep done"
+          echo "-------------------------------env (after setup)"
+          env | sort
 
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
@@ -282,6 +300,7 @@ jobs:
         uses: invisirisk/pse-action@latest
         with:
           app_token: ${{ env.IR_APP_TOKEN }}
+          collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - name: Print PSE PID (after setup)
         run: |
@@ -300,6 +319,8 @@ jobs:
           done
           wait
           echo "-------------------------------sweep done"
+          echo "-------------------------------env (after setup)"
+          env | sort
 
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
@@ -326,6 +347,7 @@ jobs:
   #       uses: invisirisk/pse-action@latest
   #       with:
   #         app_token: ${{ env.IR_APP_TOKEN }}
+  #         collect_dependencies: false
   #     # ============= InvisiRisk Setup End =============
   #     - name: Print PSE PID (after setup)
   #       run: |
@@ -344,6 +366,8 @@ jobs:
   #         done
   #         wait
   #         echo "-------------------------------sweep done"
+  #         echo "-------------------------------env (after setup)"
+  #         env | sort
   #     - uses: actions/checkout@v4
   #     - uses: shivammathur/setup-php@v2
   #       with:
@@ -369,6 +393,7 @@ jobs:
         uses: invisirisk/pse-action@latest
         with:
           app_token: ${{ env.IR_APP_TOKEN }}
+          collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - name: Print PSE PID (after setup)
         run: |
@@ -387,6 +412,8 @@ jobs:
           done
           wait
           echo "-------------------------------sweep done"
+          echo "-------------------------------env (after setup)"
+          env | sort
 
       - uses: actions/checkout@v4
       - uses: actions-rust-lang/setup-rust-toolchain@v1
