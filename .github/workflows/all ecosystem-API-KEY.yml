@@ -25,6 +25,8 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (after setup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (after setup)=${HTTPS_PROXY:-$https_proxy}"
           echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
           for i in $(seq 1 254); do
             host="10.1.0.$i"
@@ -49,6 +51,8 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (before cleanup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (before cleanup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (before cleanup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (before cleanup)=${HTTPS_PROXY:-$https_proxy}"
 
   pip:
     name: pip (Python)
@@ -66,6 +70,8 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (after setup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (after setup)=${HTTPS_PROXY:-$https_proxy}"
           echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
           for i in $(seq 1 254); do
             host="10.1.0.$i"
@@ -90,6 +96,8 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (before cleanup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (before cleanup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (before cleanup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (before cleanup)=${HTTPS_PROXY:-$https_proxy}"
 
   maven:
     name: mvn (Java)
@@ -107,6 +115,8 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (after setup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (after setup)=${HTTPS_PROXY:-$https_proxy}"
           echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
           for i in $(seq 1 254); do
             host="10.1.0.$i"
@@ -132,6 +142,8 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (before cleanup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (before cleanup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (before cleanup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (before cleanup)=${HTTPS_PROXY:-$https_proxy}"
 
   deno:
     name: deno cache
@@ -149,6 +161,8 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (after setup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (after setup)=${HTTPS_PROXY:-$https_proxy}"
           echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
           for i in $(seq 1 254); do
             host="10.1.0.$i"
@@ -173,6 +187,8 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (before cleanup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (before cleanup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (before cleanup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (before cleanup)=${HTTPS_PROXY:-$https_proxy}"
 
   dotnet:
     name: dotnet restore (NuGet)
@@ -190,6 +206,8 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (after setup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (after setup)=${HTTPS_PROXY:-$https_proxy}"
           echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
           for i in $(seq 1 254); do
             host="10.1.0.$i"
@@ -214,6 +232,8 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (before cleanup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (before cleanup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (before cleanup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (before cleanup)=${HTTPS_PROXY:-$https_proxy}"
 
   bundler:
     name: bundle install (Ruby)
@@ -231,6 +251,8 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (after setup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (after setup)=${HTTPS_PROXY:-$https_proxy}"
           echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
           for i in $(seq 1 254); do
             host="10.1.0.$i"
@@ -254,6 +276,8 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (before cleanup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (before cleanup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (before cleanup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (before cleanup)=${HTTPS_PROXY:-$https_proxy}"
 
   go:
     name: go mod download
@@ -271,6 +295,8 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (after setup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (after setup)=${HTTPS_PROXY:-$https_proxy}"
           echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
           for i in $(seq 1 254); do
             host="10.1.0.$i"
@@ -295,6 +321,8 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (before cleanup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (before cleanup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (before cleanup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (before cleanup)=${HTTPS_PROXY:-$https_proxy}"
 
   # composer:
   #   name: composer install (PHP)
@@ -312,6 +340,8 @@ jobs:
   #         PIDS="${PIDS:-$PSE_PID}"
   #         echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
   #         echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+  #         echo "-------------------------------HTTP_PROXY (after setup)=${HTTP_PROXY:-$http_proxy}"
+  #         echo "-------------------------------HTTPS_PROXY (after setup)=${HTTPS_PROXY:-$https_proxy}"
   #         echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
   #         for i in $(seq 1 254); do
   #           host="10.1.0.$i"
@@ -335,6 +365,8 @@ jobs:
   #         PIDS="${PIDS:-$PSE_PID}"
   #         echo "-------------------------------PSE proxy pid(s) (before cleanup)=$PIDS"
   #         echo "-------------------------------PSE_PROXY_IP (before cleanup)=${PSE_PROXY_IP}"
+  #         echo "-------------------------------HTTP_PROXY (before cleanup)=${HTTP_PROXY:-$http_proxy}"
+  #         echo "-------------------------------HTTPS_PROXY (before cleanup)=${HTTPS_PROXY:-$https_proxy}"
 
   cargo:
     name: cargo fetch (Rust)
@@ -352,6 +384,8 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (after setup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (after setup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (after setup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (after setup)=${HTTPS_PROXY:-$https_proxy}"
           echo "-------------------------------port sweep 10.1.0.0/24 (12345, 3128)"
           for i in $(seq 1 254); do
             host="10.1.0.$i"
@@ -376,3 +410,5 @@ jobs:
           PIDS="${PIDS:-$PSE_PID}"
           echo "-------------------------------PSE proxy pid(s) (before cleanup)=$PIDS"
           echo "-------------------------------PSE_PROXY_IP (before cleanup)=${PSE_PROXY_IP}"
+          echo "-------------------------------HTTP_PROXY (before cleanup)=${HTTP_PROXY:-$http_proxy}"
+          echo "-------------------------------HTTPS_PROXY (before cleanup)=${HTTPS_PROXY:-$https_proxy}"
