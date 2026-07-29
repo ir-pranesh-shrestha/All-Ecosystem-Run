@@ -8,12 +8,18 @@ jobs:
     name: npm (Node.js)
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          # ---- locate the proxy (owner of port 3128; runs as root) ----
+          PID=$(sudo ss -ltnp 2>/dev/null | awk '/:3128 /{print}' | grep -oE 'pid=[0-9]+' | head -1 | cut -d= -f2)
+          PID="${PID:-$PSE_PID}"
+          echo "-------------------------------profiling Go proxy pid=$PID"
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
         with:
           app_token: KM3ViAikKmTPJOYKawGi-frMevfui2MtjrNnEsCNe81ZfbWAch9nWU4le0UVz6nyDV4gJpUH2txYoI6dF1AWfw
       # ============= InvisiRisk Setup End =============
+          
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
@@ -24,6 +30,11 @@ jobs:
     name: pip (Python)
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          # ---- locate the proxy (owner of port 3128; runs as root) ----
+          PID=$(sudo ss -ltnp 2>/dev/null | awk '/:3128 /{print}' | grep -oE 'pid=[0-9]+' | head -1 | cut -d= -f2)
+          PID="${PID:-$PSE_PID}"
+          echo "-------------------------------profiling Go proxy pid=$PID"
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
@@ -40,6 +51,11 @@ jobs:
     name: mvn (Java)
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          # ---- locate the proxy (owner of port 3128; runs as root) ----
+          PID=$(sudo ss -ltnp 2>/dev/null | awk '/:3128 /{print}' | grep -oE 'pid=[0-9]+' | head -1 | cut -d= -f2)
+          PID="${PID:-$PSE_PID}"
+          echo "-------------------------------profiling Go proxy pid=$PID"
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
@@ -56,6 +72,11 @@ jobs:
     name: deno cache
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          # ---- locate the proxy (owner of port 3128; runs as root) ----
+          PID=$(sudo ss -ltnp 2>/dev/null | awk '/:3128 /{print}' | grep -oE 'pid=[0-9]+' | head -1 | cut -d= -f2)
+          PID="${PID:-$PSE_PID}"
+          echo "-------------------------------profiling Go proxy pid=$PID"
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
@@ -72,6 +93,11 @@ jobs:
     name: dotnet restore (NuGet)
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          # ---- locate the proxy (owner of port 3128; runs as root) ----
+          PID=$(sudo ss -ltnp 2>/dev/null | awk '/:3128 /{print}' | grep -oE 'pid=[0-9]+' | head -1 | cut -d= -f2)
+          PID="${PID:-$PSE_PID}"
+          echo "-------------------------------profiling Go proxy pid=$PID"
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
@@ -88,6 +114,11 @@ jobs:
     name: bundle install (Ruby)
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          # ---- locate the proxy (owner of port 3128; runs as root) ----
+          PID=$(sudo ss -ltnp 2>/dev/null | awk '/:3128 /{print}' | grep -oE 'pid=[0-9]+' | head -1 | cut -d= -f2)
+          PID="${PID:-$PSE_PID}"
+          echo "-------------------------------profiling Go proxy pid=$PID"
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
@@ -102,6 +133,11 @@ jobs:
     name: go mod download
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          # ---- locate the proxy (owner of port 3128; runs as root) ----
+          PID=$(sudo ss -ltnp 2>/dev/null | awk '/:3128 /{print}' | grep -oE 'pid=[0-9]+' | head -1 | cut -d= -f2)
+          PID="${PID:-$PSE_PID}"
+          echo "-------------------------------profiling Go proxy pid=$PID"
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
@@ -133,6 +169,11 @@ jobs:
     name: cargo fetch (Rust)
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          # ---- locate the proxy (owner of port 3128; runs as root) ----
+          PID=$(sudo ss -ltnp 2>/dev/null | awk '/:3128 /{print}' | grep -oE 'pid=[0-9]+' | head -1 | cut -d= -f2)
+          PID="${PID:-$PSE_PID}"
+          echo "-------------------------------profiling Go proxy pid=$PID"
       # ============= InvisiRisk Setup =============
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
