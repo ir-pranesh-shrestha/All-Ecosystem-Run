@@ -1,4 +1,4 @@
-name: Install All Ecosystem Packages
+name: Install All Ecosystem Packages-API-KEY
 
 on:
   workflow_dispatch:
