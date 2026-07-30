@@ -3,13 +3,25 @@ name: Docker Build (Command)
 on:
   workflow_dispatch:
 
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
 jobs:
   docker-build:
     name: Build Dockerfile via docker build command
     runs-on: ubuntu-latest
     steps:
+      # ============= InvisiRisk Setup =============
+      - name: Setup PSE
+        uses: invisirisk/pse-action@latest
+        with:
+          app_token: dPawfsnWJ6oNLu5V5aEOIN60RihX-HtmSAk1zxp9RrZYIimoesbfQBLw4xmqIzW8FLce0owl_cdnzmwQmXdOTg
+      # ============= InvisiRisk Setup End =============
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Build Docker image
-        run: docker build -t ecosystems-demo:latest -f Dockerfile .
+        run: docker build -t ecosystems-demo:latest -f Dockerfile --build-arg BUILDKIT_SYNTAX=public.ecr.aws/w3c0c0n7/invisirisk/baf-buildkit:latest --secret id=pse-ca,src=${PSE_CA_CERT_PATH} --build-arg PSE_PROXY=http://${PSE_PROXY_IP}:3128 .
