@@ -17,7 +17,7 @@ jobs:
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
         with:
-          app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
+          app_token: Lk0jD_w2QVSqm_-8AyQEtstYohkJkT8w5y_fj2rb2w7X_n7jyT1g-F8xMM9DKi0uNnlQ7XvnDiSSCUEl1KxO6Q
           collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
@@ -34,7 +34,7 @@ jobs:
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
         with:
-          app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
+          app_token: Lk0jD_w2QVSqm_-8AyQEtstYohkJkT8w5y_fj2rb2w7X_n7jyT1g-F8xMM9DKi0uNnlQ7XvnDiSSCUEl1KxO6Q
           collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
@@ -51,7 +51,7 @@ jobs:
   #     - name: Setup PSE
   #       uses: invisirisk/pse-action@latest
   #       with:
-  #         app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
+  #         app_token: Lk0jD_w2QVSqm_-8AyQEtstYohkJkT8w5y_fj2rb2w7X_n7jyT1g-F8xMM9DKi0uNnlQ7XvnDiSSCUEl1KxO6Q
   #         collect_dependencies: false
   #     # ============= InvisiRisk Setup End =============
   #     - uses: actions/checkout@v4
@@ -68,7 +68,7 @@ jobs:
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
         with:
-          app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
+          app_token: Lk0jD_w2QVSqm_-8AyQEtstYohkJkT8w5y_fj2rb2w7X_n7jyT1g-F8xMM9DKi0uNnlQ7XvnDiSSCUEl1KxO6Q
           collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
@@ -85,7 +85,7 @@ jobs:
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
         with:
-          app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
+          app_token: Lk0jD_w2QVSqm_-8AyQEtstYohkJkT8w5y_fj2rb2w7X_n7jyT1g-F8xMM9DKi0uNnlQ7XvnDiSSCUEl1KxO6Q
           collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
@@ -102,7 +102,7 @@ jobs:
   #     - name: Setup PSE
   #       uses: invisirisk/pse-action@latest
   #       with:
-  #         app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
+  #         app_token: Lk0jD_w2QVSqm_-8AyQEtstYohkJkT8w5y_fj2rb2w7X_n7jyT1g-F8xMM9DKi0uNnlQ7XvnDiSSCUEl1KxO6Q
   #         collect_dependencies: false
   #     # ============= InvisiRisk Setup End =============
   #     - uses: actions/checkout@v4
@@ -117,7 +117,7 @@ jobs:
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
         with:
-          app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
+          app_token: Lk0jD_w2QVSqm_-8AyQEtstYohkJkT8w5y_fj2rb2w7X_n7jyT1g-F8xMM9DKi0uNnlQ7XvnDiSSCUEl1KxO6Q
           collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
@@ -149,7 +149,7 @@ jobs:
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
         with:
-          app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
+          app_token: Lk0jD_w2QVSqm_-8AyQEtstYohkJkT8w5y_fj2rb2w7X_n7jyT1g-F8xMM9DKi0uNnlQ7XvnDiSSCUEl1KxO6Q
           collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
