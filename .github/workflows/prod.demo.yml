@@ -1,4 +1,4 @@
-name: Install All Ecosystem Packages - prod - demo
+name: Internal multi-stage run demonstration
 
 on:
   workflow_dispatch:
@@ -17,7 +17,7 @@ jobs:
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
         with:
-          app_token: QjBzNstTT2ynTUd_ICWtWMSeXRuxN4hBocwwVl52bssIWmAYlJ7Eg5E8QexIJ3EWsMFfmPVnAt85sKX7XgfllA
+          app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
           collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
@@ -34,7 +34,7 @@ jobs:
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
         with:
-          app_token: QjBzNstTT2ynTUd_ICWtWMSeXRuxN4hBocwwVl52bssIWmAYlJ7Eg5E8QexIJ3EWsMFfmPVnAt85sKX7XgfllA
+          app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
           collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
@@ -51,7 +51,7 @@ jobs:
   #     - name: Setup PSE
   #       uses: invisirisk/pse-action@latest
   #       with:
-  #         app_token: QjBzNstTT2ynTUd_ICWtWMSeXRuxN4hBocwwVl52bssIWmAYlJ7Eg5E8QexIJ3EWsMFfmPVnAt85sKX7XgfllA
+  #         app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
   #         collect_dependencies: false
   #     # ============= InvisiRisk Setup End =============
   #     - uses: actions/checkout@v4
@@ -68,7 +68,7 @@ jobs:
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
         with:
-          app_token: QjBzNstTT2ynTUd_ICWtWMSeXRuxN4hBocwwVl52bssIWmAYlJ7Eg5E8QexIJ3EWsMFfmPVnAt85sKX7XgfllA
+          app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
           collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
@@ -85,7 +85,7 @@ jobs:
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
         with:
-          app_token: QjBzNstTT2ynTUd_ICWtWMSeXRuxN4hBocwwVl52bssIWmAYlJ7Eg5E8QexIJ3EWsMFfmPVnAt85sKX7XgfllA
+          app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
           collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
@@ -102,7 +102,7 @@ jobs:
   #     - name: Setup PSE
   #       uses: invisirisk/pse-action@latest
   #       with:
-  #         app_token: QjBzNstTT2ynTUd_ICWtWMSeXRuxN4hBocwwVl52bssIWmAYlJ7Eg5E8QexIJ3EWsMFfmPVnAt85sKX7XgfllA
+  #         app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
   #         collect_dependencies: false
   #     # ============= InvisiRisk Setup End =============
   #     - uses: actions/checkout@v4
@@ -117,7 +117,7 @@ jobs:
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
         with:
-          app_token: QjBzNstTT2ynTUd_ICWtWMSeXRuxN4hBocwwVl52bssIWmAYlJ7Eg5E8QexIJ3EWsMFfmPVnAt85sKX7XgfllA
+          app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
           collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
@@ -149,7 +149,7 @@ jobs:
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
         with:
-          app_token: QjBzNstTT2ynTUd_ICWtWMSeXRuxN4hBocwwVl52bssIWmAYlJ7Eg5E8QexIJ3EWsMFfmPVnAt85sKX7XgfllA
+          app_token: --4ZjEN4KbMrVFAPd3_tcDphvZCw-ECvkRZGAQ4_AbC-AQkl2Lf_l5fx90fJHeFX9jRLH9vxWvUQXrWA9dnhVw
           collect_dependencies: false
       # ============= InvisiRisk Setup End =============
       - uses: actions/checkout@v4
